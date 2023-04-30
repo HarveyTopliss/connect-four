@@ -1,0 +1,113 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  max-height: 100vh;
+  width: 100%;
+}
+
+#title-container {
+  padding-block: 0.01em;
+  font-size: 2.5rem;
+  color: white;
+  background-color: darkblue;
+}
+
+#title-container h1 {
+  text-align: center;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+}
+
+#player-heading-container {
+  padding-block: 0.333em;
+  font-size: 3rem;
+  background-color: hsl(195, 71%, 73%);
+}
+
+.player-heading {
+  text-align: center;
+  font-size: inherit;
+  letter-spacing: 0.01em;
+}
+
+.heading-one {
+  text-shadow: 0 0 0.1em red;
+}
+
+.heading-two {
+  text-shadow: 0 0 0.1em yellow;
+}
+
+.hidden {
+  display: none;
+}
+
+#board {
+  position: relative;
+  height: 60vh;
+  width: 80%;
+  margin: 17.5% 0 0 10%;
+  border: solid darkblue 12px;
+  border-radius: 12px;
+  background-color: hsl(195, 71%, 73%);
+}
+
+#drop-container {
+  position: absolute;
+  display: grid;
+  top: 0;
+  grid-template-columns: repeat(7, 1fr);
+  height: calc(60vh / 6);
+  width: calc(80vw - 24px);
+  padding: 14px 13px 4px 13px;
+  transform: translateY(calc(-100% - 12px));
+  gap: 12px;
+}
+
+.counter-one,
+.counter-two {
+  height: 100%;
+  width: 100%;
+  border: solid 2px black;
+  outline: solid 2px black;
+  outline-offset: -12px;
+  border-radius: 50%;
+}
+
+.counter-one {
+  background-color: red;
+}
+
+.counter-two {
+  background-color: yellow;
+}
+
+#game-overlay,
+#game-grid {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 4px 12px 12px 12px;
+  grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+  gap: 12px;
+}
+
+.cell {
+  height: 100%;
+  width: 100%;
+  border: solid 4px darkblue;
+  border-radius: 50%;
+  background-color: white;
+}
+
+[data-column] {
+  cursor: pointer;
+}
