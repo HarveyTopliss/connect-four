@@ -49,9 +49,9 @@ body {
 
 #board {
   position: relative;
-  height: 60vh;
-  width: 80%;
-  margin: 17.5% 0 0 10%;
+  height: 555px;
+  width: 740px;
+  margin: 150px auto 0 auto;
   border: solid darkblue 12px;
   border-radius: 12px;
   background-color: hsl(195, 71%, 73%);
@@ -62,9 +62,9 @@ body {
   display: grid;
   top: 0;
   grid-template-columns: repeat(7, 1fr);
-  height: calc(60vh / 6);
-  width: calc(80vw - 24px);
-  padding: 14px 13px 4px 13px;
+  height: 91.85px; /*((515 - 60) / 5) + 16 (gridContent - gap) / 6 + padding*/
+  width: 716px;
+  padding: 12px 12px 4px 12px;
   transform: translateY(calc(-100% - 12px));
   gap: 12px;
 }
